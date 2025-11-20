@@ -35,10 +35,10 @@ export default function Home() {
     );
 
   return (
-    <main className="p-10">
+    <main className="p-5">
       <h1 className="text-3xl font-bold mb-8">User Dashboard</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
         {users.map((user) => (
           <div
             key={user.id}
