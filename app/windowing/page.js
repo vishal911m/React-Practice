@@ -23,7 +23,7 @@ const Page = () => {
   return (
     <>
       <h1 style={{textAlign: 'center'}}>Windowing Example</h1>
-      <div className='App'
+      {/* <div className='App'
         style={{
           width: "500px",
           height: "500px",
@@ -31,7 +31,17 @@ const Page = () => {
           margin: "0 auto",
           overflow: "auto",
         }}
-      >{load && renderList()}</div>
+      >{load && renderList()}</div> */}
+      <div 
+        className='App'
+        style={{
+          width: "500px",
+          height: "500px",
+          border: "1px solid black",
+          margin: "0 auto",
+          overflow: "auto",
+        }}
+      >{renderList()}</div>
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <button style={{textAlign: 'center'}} onClick={()=>setLoad(true)}>
           Load List
