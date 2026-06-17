@@ -2,16 +2,18 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Page() {
   const [count, setCount] = useState(0);
+  const countRef = useRef(count);
+  countRef.current = count; // Always updates
 
   useEffect(() => {
     setTimeout(() => {
-      console.log(`Count is: ${count}`);
+      console.log(`Count is: ${countRef.current}`);
     }, 3000);
-  }, []); // Runs only once when component mounts
+  }, [count]); // Runs only once when component mounts
 
   return (
     <div>
